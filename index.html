@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Stichting Naastenliefde - Voor iedereen gelijke kansen. Wij helpen mensen die het financieel, sociaal of emotioneel moeilijk hebben.">
+    <title>Stichting Naastenliefde - Voor iedereen gelijke kansen</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="index.html" class="logo">Stichting Naastenliefde</a>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li>
+                        <a href="over-ons.html">Over ons</a>
+                        <ul class="dropdown">
+                            <li><a href="over-ons.html#ons-bestuur">Ons bestuur</a></li>
+                            <li><a href="over-ons.html#onze-missie">Onze missie</a></li>
+                            <li><a href="over-ons.html#cultuur">Cultuur</a></li>
+                            <li><a href="over-ons.html#waar-wij-voor-staan">Waar wij voor staan</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="beleid-financien.html">Beleid & financiën</a>
+                        <ul class="dropdown">
+                            <li><a href="beleid-financien.html#beloningsbeleid">Beloningsbeleid</a></li>
+                            <li><a href="beleid-financien.html#begunstigers">Onze begunstigers</a></li>
+                            <li><a href="beleid-financien.html#jaarstukken">Jaarstukken</a></li>
+                            <li><a href="beleid-financien.html#notariele-akten">Notariële akten</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="onze-projecten.html">Onze projecten</a>
+                        <ul class="dropdown">
+                            <li><a href="onze-projecten.html#recente-projecten">Recente projecten</a></li>
+                            <li><a href="onze-projecten.html#historische-projecten">Bijdragen t/m 2021</a></li>
+                            <li><a href="onze-projecten.html#reacties">Reacties deelnemers</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="background-image: url('images/hero-kinderen.jpg');">
+        <div class="hero-content">
+            <h1>Stichting Naastenliefde</h1>
+            <p>Samen maken we het verschil voor mensen die het nodig hebben</p>
+        </div>
+    </section>
+
+    <!-- Missie Sectie -->
+    <section class="mission-section">
+        <div class="container">
+            <h2>Onze missie</h2>
+            <p><strong>Voor iedereen gelijke kansen.</strong></p>
+            <p>Wij vinden dat niemand van de honger en door geldgebrek mag omkomen.</p>
+        </div>
+    </section>
+
+    <!-- Cultuur Sectie -->
+    <section class="mission-section alt-bg">
+        <div class="container">
+            <h2>Wij kunnen van iedere cultuur wat leren</h2>
+            <p>Wij vinden dat iedereen recht heeft op voldoende sociale en emotionele contacten.</p>
+        </div>
+    </section>
+
+    <!-- Hulp nodig sectie -->
+    <section class="mission-section">
+        <div class="container">
+            <h2>Heeft u of uw naaste hulp nodig?</h2>
+            <p>Neem gerust contact met ons op. Wij kijken samen met u naar mogelijkheden om te helpen.</p>
+            <a href="contact.html" class="btn btn-primary">Neem contact op</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Stichting Naastenliefde</h3>
+                <p>Voor iedereen gelijke kansen. Wij maken het verschil voor mensen die het nodig hebben.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigatie</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="over-ons.html">Over ons</a></li>
+                    <li><a href="beleid-financien.html">Beleid & financiën</a></li>
+                    <li><a href="onze-projecten.html">Onze projecten</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Dorpstraat 2B<br>
+                6923 AE Groessen<br>
+                Nederland</p>
+                <p>T: 06-22778208<br>
+                E: <a href="mailto:info@naastenliefde.com">info@naastenliefde.com</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Stichting Naastenliefde. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('nav-menu').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
