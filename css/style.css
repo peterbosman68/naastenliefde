@@ -49,10 +49,18 @@ header {
 }
 
 .logo {
-    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
     font-weight: 700;
     color: #FF6B35;
     text-decoration: none;
+}
+
+.logo img {
+    height: 45px;
+    width: auto;
 }
 
 .logo:hover {
