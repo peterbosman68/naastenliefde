@@ -1,0 +1,8 @@
+# Robots.txt voor Stichting Naastenliefde
+# https://www.naastenliefde.com
+
+User-agent: *
+Allow: /
+
+# Sitemap locatie
+Sitemap: https://www.naastenliefde.com/sitemap.xml

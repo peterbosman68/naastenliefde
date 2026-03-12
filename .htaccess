@@ -1,0 +1,60 @@
+# .htaccess voor Stichting Naastenliefde
+# Apache configuratie
+
+# Forceer HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# www naar non-www redirect (of andersom, kies er één)
+RewriteCond %{HTTP_HOST} ^naastenliefde\.com [NC]
+RewriteRule ^(.*)$ https://www.naastenliefde.com/$1 [L,R=301]
+
+# Default document
+DirectoryIndex index.html
+
+# Custom 404 pagina
+ErrorDocument 404 /404.html
+
+# Caching voor betere performance
+<IfModule mod_expires.c>
+    ExpiresActive On
+    
+    # Afbeeldingen - 1 maand
+    ExpiresByType image/jpeg "access plus 1 month"
+    ExpiresByType image/png "access plus 1 month"
+    ExpiresByType image/gif "access plus 1 month"
+    ExpiresByType image/webp "access plus 1 month"
+    ExpiresByType image/svg+xml "access plus 1 month"
+    ExpiresByType image/x-icon "access plus 1 year"
+    
+    # CSS en JavaScript - 1 week
+    ExpiresByType text/css "access plus 1 week"
+    ExpiresByType application/javascript "access plus 1 week"
+    
+    # PDF documenten - 1 maand
+    ExpiresByType application/pdf "access plus 1 month"
+    
+    # HTML - 1 dag
+    ExpiresByType text/html "access plus 1 day"
+</IfModule>
+
+# GZIP compressie
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html
+    AddOutputFilterByType DEFLATE text/css
+    AddOutputFilterByType DEFLATE application/javascript
+    AddOutputFilterByType DEFLATE application/xml
+    AddOutputFilterByType DEFLATE image/svg+xml
+</IfModule>
+
+# Beveiligingsheaders
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Voorkom directory listing
+Options -Indexes
